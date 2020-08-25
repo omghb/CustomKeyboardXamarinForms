@@ -9,8 +9,8 @@
     <ScrollView>
         <Grid Padding="15">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             
@@ -38,10 +38,20 @@
                     TextColor="Black"
                     Placeholder="Custom Keyboard entry 2..." />
             </StackLayout>
-            
-            <BoxView
-                Grid.Row="2" />
-            
+
+            <StackLayout Grid.Row="2">
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Placeholder="Regular entry 2..." />
+
+                <local:EntryWithCustomKeyboard
+                    x:Name="entry3"
+                    HorizontalOptions="FillAndExpand"
+                    Keyboard="Text"
+                    TextColor="Black"
+                    Placeholder="Custom Keyboard entry 3..." />
+            </StackLayout>
         </Grid>
     </ScrollView>
 </ContentPage>
